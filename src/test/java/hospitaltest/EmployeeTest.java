@@ -5,25 +5,30 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import hospital.Employee;
+import hospital.Doctor;
 
 public class EmployeeTest {
 
-	Employee e;
+	Doctor d;
 	@Before
 	public void setup() {
-		e = new Employee("Parker", 1234);
+		d = new Doctor("Parker", 1234, null);
 	}
 	
 	@Test
 	public void employeeShouldHaveAName() {
-		String name = e.getName();
+		String name = d.getName();
 		assertEquals("Parker", name);
 	}
 	
 	@Test
 	public void employeeShouldHaveAIDNumber() {
-		int id = e.getId();
+		int id = d.getId();
 		assertEquals(1234, id);
+	}
+	
+	@Test
+	public void shouldHaveAbstractCalculatePay() {
+		//should have abstract method called calculatePay();
 	}
 }
