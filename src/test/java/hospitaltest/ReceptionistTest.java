@@ -10,7 +10,7 @@ import patient.Patient;
 
 public class ReceptionistTest {
 
-	Patient p = new Patient("Doug");
+	Patient patient = new Patient("Doug");
 	
 	Receptionist recep;
 	@Before
@@ -21,8 +21,15 @@ public class ReceptionistTest {
 	@Test
 	public void shouldHaveHashMapOfPatients() {
 		int firstSize = recep.getPatientsSize();
-		recep.addPatient(p);
+		recep.addPatient(patient);
 		int secondSize = recep.getPatientsSize();
 		assertEquals(firstSize + 1, secondSize);
+	}
+	
+	@Test
+	public void shouldGetSinglePatientByName() {
+		recep.addPatient(patient);
+		Patient getPatient = recep.getSinglePatient("Doug");
+		assertEquals(patient, getPatient);
 	}
 }

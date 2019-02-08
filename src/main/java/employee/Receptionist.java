@@ -32,4 +32,8 @@ public class Receptionist extends Employee {
 		return patients.size();
 	}
 
+	public Patient getSinglePatient(String name) {
+		return patients.get(name);
+	}
+
 }
