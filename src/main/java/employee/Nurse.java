@@ -1,8 +1,10 @@
-package hospital;
+package employee;
 
 import java.util.HashMap;
 
-public class Nurse extends Employee {
+import patient.Patient;
+
+public class Nurse extends Employee implements IInteractWithPatient{
 
 	private int pay;
 	HashMap<String, Patient> patients = new HashMap<String, Patient>();
@@ -28,6 +30,16 @@ public class Nurse extends Employee {
 
 	public int getPatientsSize() {
 		return patients.size();
+	}
+
+	@Override
+	public void drawBlood(Patient patient) {
+		patient.bloodDrawnFromNurse();
+	}
+
+	@Override
+	public void careForPatient(Patient patient) {
+		patient.careFromNurse();
 	}
 
 }

@@ -1,4 +1,4 @@
-package hospital;
+package employee;
 
 public abstract class Employee {
 
