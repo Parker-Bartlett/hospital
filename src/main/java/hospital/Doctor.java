@@ -1,6 +1,6 @@
 package hospital;
 
-public class Doctor extends Employee {
+public abstract class Doctor extends Employee {
 
 	private String specialty;
 	private int pay;

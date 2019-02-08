@@ -1,11 +1,11 @@
 package hospital;
 
-public class Surgeon extends Employee {
+public class Surgeon extends Doctor {
 	
 	private boolean isOperating;
 	private int pay;
-	public Surgeon(String name, int id) {
-		super(name, id);
+	public Surgeon(String name, int id, String specialty) {
+		super(name, id, specialty);
 		this.isOperating = false;
 		this.pay = 120000;
 	}

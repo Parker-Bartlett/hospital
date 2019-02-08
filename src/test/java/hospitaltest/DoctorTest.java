@@ -4,20 +4,19 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import hospital.Doctor;
+import hospital.Surgeon;
 
 public class DoctorTest {
 
-	Doctor d;
+	Surgeon s;
 	@Before
 	public void setup() {
-		d = new Doctor("Parker", 1234, "Brain");
+		s = new Surgeon("Parker", 1234, "heart");
 	}
 	
 	@Test
 	public void doctorShouldHaveSpecialty() {
-		String specialty = d.getSpecialty();
+		String specialty = s.getSpecialty();
 		assertEquals(specialty, "Brain");
 	}
 }
