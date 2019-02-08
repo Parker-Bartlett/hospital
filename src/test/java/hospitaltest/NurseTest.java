@@ -5,8 +5,8 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import hospital.Nurse;
-import hospital.Patient;
+import employee.Nurse;
+import patient.Patient;
 
 public class NurseTest {
 	
