@@ -3,7 +3,8 @@ package hospitaltest;
 import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
-import hospital.Janitor;
+
+import employee.Janitor;
 
 public class JanitorTest {
 	
