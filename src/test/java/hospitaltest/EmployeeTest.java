@@ -5,25 +5,25 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import hospital.Doctor;
+import hospital.Surgeon;
 
 public class EmployeeTest {
 
-	Doctor d;
+	Surgeon s;
 	@Before
 	public void setup() {
-		d = new Doctor("Parker", 1234, null);
+		s = new Surgeon("Parker", 1234, "heart");
 	}
 	
 	@Test
 	public void employeeShouldHaveAName() {
-		String name = d.getName();
+		String name = s.getName();
 		assertEquals("Parker", name);
 	}
 	
 	@Test
 	public void employeeShouldHaveAIDNumber() {
-		int id = d.getId();
+		int id = s.getId();
 		assertEquals(1234, id);
 	}
 	

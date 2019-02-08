@@ -11,7 +11,7 @@ public class SurgeonTest {
 	Surgeon s;
 	@Before
 	public void setup() {
-		s = new Surgeon("Parker", 1234);
+		s = new Surgeon("Parker", 1234, "heart");
 	}	
 	
 	@Test
