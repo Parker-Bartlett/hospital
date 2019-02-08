@@ -19,5 +19,10 @@ public abstract class Employee {
 	}
 	
 	public abstract int calculatePay();
+	
+	@Override
+	public String toString() {
+		return "Name: " + name;
+	}
 
 }
