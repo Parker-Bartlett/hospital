@@ -23,6 +23,21 @@ public class Patient implements IPatientStatistics{
 	public int getHealthLevel() {
 		return healthLevel;
 	}
+	
+	public String tick() {
+		String returnStatement = "\n";
+		bloodLevel -= 1;
+		healthLevel -= 2;
+		if (bloodLevel <= 0) {
+			bloodLevel = 0;
+			returnStatement += name + "Is out of blood, and loosing health quickly! Act soon or risk their death.";
+		}
+		if (healthLevel <= 0) {
+			healthLevel = 0;
+			returnStatement += name + " has died...";
+		} 
+		return returnStatement;
+	}
 
 	public void bloodDrawnFromDoctor() {
 		bloodLevel -= 5;
@@ -31,6 +46,7 @@ public class Patient implements IPatientStatistics{
 
 	public void careFromDoctor() {
 		healthLevel += 10;
+		bloodLevel += 1;
 	}
 
 	public void bloodDrawnFromSurgeon() {
@@ -40,6 +56,7 @@ public class Patient implements IPatientStatistics{
 
 	public void careFromSurgeon() {
 		healthLevel += 15;
+		bloodLevel += 5;
 	}
 
 	public void bloodDrawnFromNurse() {
