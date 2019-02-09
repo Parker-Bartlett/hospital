@@ -16,5 +16,10 @@ public class Janitor extends Employee{
 	public boolean toggleSweepinng() {
 		return isSweeping = !isSweeping;
 	}
+	
+	@Override
+	public String toString() {
+		return "Janitor " + getName() + " " + getId() + " " + isSweeping;
+	}
 
 }

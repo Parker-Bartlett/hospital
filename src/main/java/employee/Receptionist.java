@@ -35,5 +35,9 @@ public class Receptionist extends Employee {
 	public Patient getSinglePatient(String name) {
 		return patients.get(name);
 	}
-
+	
+	@Override
+	public String toString() {
+		return "Receptionist " + getName() + " " + getId();
+	}
 }
