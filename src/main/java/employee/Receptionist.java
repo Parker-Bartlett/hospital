@@ -37,6 +37,15 @@ public class Receptionist extends Employee {
 		return patients.size();
 	}
 
+	public void tickAll() {
+		for (Patient patient : patients.values()) {
+			patient.tick();
+			if (patient.getHealthLevel() <= 0) {
+				patients.remove(patient.getName());
+			}
+		}
+	}
+
 	public Patient getSinglePatient(String name) {
 		return patients.get(name);
 	}
@@ -45,5 +54,6 @@ public class Receptionist extends Employee {
 	public String toString() {
 		return "Receptionist " + getName() + " " + getId();
 	}
+
 
 }
