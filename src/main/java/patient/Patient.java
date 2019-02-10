@@ -30,6 +30,7 @@ public class Patient implements IPatientStatistics{
 		healthLevel -= 2;
 		if (bloodLevel <= 0) {
 			bloodLevel = 0;
+			healthLevel -= 5;
 			returnStatement += name + "Is out of blood, and loosing health quickly! Act soon or risk their death.";
 		}
 		if (healthLevel <= 0) {

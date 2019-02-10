@@ -61,6 +61,15 @@ public class Hospital {
 
 	public void superClean() {
 		cleanliness += 25;
+	}
+
+	public String tickCleanliness() {
+		String cleanlinessMessage = "";
+		cleanliness -= 5;
+		if (cleanliness <= 0) {
+			cleanlinessMessage += "The hospital is extremely dirty please clean it!!";
+		}
+		return cleanlinessMessage;
 	} 
 	
 	
