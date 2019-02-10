@@ -67,6 +67,11 @@ public class Patient implements IPatientStatistics{
 	public void careFromNurse() {
 		healthLevel += 5;
 	}
+	
+	@Override
+	public String toString() {
+		return "Patient Name: " +name+ " Blood Level: " +bloodLevel+ " Health level: " +healthLevel;
+	}
 
 
 }

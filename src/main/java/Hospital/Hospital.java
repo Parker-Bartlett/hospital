@@ -8,8 +8,11 @@ import employee.IInteractWithPatient;
 
 public class Hospital {
 	HashMap<String, Employee> employees = new HashMap<String, Employee>();
+	private int cleanliness;
 	
-	public Hospital() {}
+	public Hospital() {
+		this.cleanliness = 50;
+	}
 	
 	public void addEmployee(Employee e) {
 		employees.put(e.getName(), e);
@@ -46,6 +49,18 @@ public class Hospital {
 		}
 		canCareForPatient += "\n";
 		return canCareForPatient;
+	}
+
+	public int getCleanliness() {
+		return cleanliness;
+	}
+
+	public void clean() {
+		cleanliness += 10;
+	}
+
+	public void superClean() {
+		cleanliness += 25;
 	} 
 	
 	

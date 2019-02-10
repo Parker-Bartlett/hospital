@@ -1,7 +1,10 @@
 package employee;
 
-public class Janitor extends Employee{
+import Hospital.Hospital;
 
+public class Janitor extends Employee{
+	
+	Hospital hospital = new Hospital();
 	private int pay;
 	public boolean isSweeping;
 	public Janitor(String name, int id) {
@@ -20,6 +23,13 @@ public class Janitor extends Employee{
 	@Override
 	public String toString() {
 		return "Janitor " + getName() + " " + getId() + " " + isSweeping;
+	}
+	public void clean() {
+		hospital.clean();
+	}
+	
+	public void superClean() {
+		hospital.superClean();
 	}
 
 }
