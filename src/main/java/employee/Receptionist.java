@@ -55,5 +55,17 @@ public class Receptionist extends Employee {
 		return "Receptionist " + getName() + " " + getId();
 	}
 
+	public void drawBloodOfAll() {
+		for (Patient patient : patients.values()) {
+			patient.bloodDrawnFromNurse();
+		}
+	}
+
+	public void careForAll() {
+		for (Patient patient : patients.values()) {
+			patient.careFromNurse();
+		}
+	}
+
 
 }

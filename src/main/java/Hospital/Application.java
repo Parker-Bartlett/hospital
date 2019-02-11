@@ -132,7 +132,16 @@ public class Application {
 						}
 						break;
 					case "medical team":
-						// treat all patients
+						System.out.println(((Receptionist) recep).getPatients());
+						System.out.println("Would you like to \"care for\" or \"draw blood\" of all patients?");
+						String allPatientChoice = input.nextLine();
+						switch (allPatientChoice) {
+						case "draw blood":
+							((Receptionist) recep).drawBloodOfAll();
+						case "care for":
+							((Receptionist) recep).careForAll();
+						}
+						System.out.println(((Receptionist) recep).getPatients());
 						break;
 					case "exit":
 						employeeInteraction = false;
