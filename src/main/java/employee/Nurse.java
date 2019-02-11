@@ -26,4 +26,8 @@ public class Nurse extends Employee implements IInteractWithPatient{
 		patient.careFromNurse();
 	}
 
+	@Override
+	public String toString() {
+		return "Nurse " + getName() + " " + getId() + " ";
+	}
 }

@@ -32,4 +32,8 @@ public class Doctor extends Employee implements IInteractWithPatient {
 		patient.careFromDoctor();
 	}
 
+	@Override
+	public String toString() {
+		return "Doctor " + getName() + " " + getId() + " " + specialty;
+	}
 }
